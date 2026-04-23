@@ -27,7 +27,7 @@ void setupPerspective();
 void setupCamera();
 
 int main() {
-    printf("Starting FPS Game...\n");
+    printf("starting engine... \n");
     
     // init GLFW
     if (!glfwInit()) {
@@ -145,25 +145,18 @@ void mouseCallback(GLFWwindow* window, double xpos, double ypos) {
     lastMouseX = xpos;
     lastMouseY = ypos;
 
-    xoffset *= mouseSensitivity;
-    yoffset *= mouseSensitivity;
+    playerYaw   += xoffset * mouseSensitivity;
+    playerPitch -= yoffset * mouseSensitivity;
 
-    playerYaw += xoffset;
-    playerPitch += yoffset;
-
-    // constrain pitch
-    if (playerPitch > 89.0f)
-        playerPitch = 89.0f;
-    if (playerPitch < -89.0f)
-        playerPitch = -89.0f;
+    if (playerPitch > 89.0f)  playerPitch =  89.0f;
+    if (playerPitch < -89.0f) playerPitch = -89.0f;
 }
 
 void setupPerspective() {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     
-    // set up perspective projection
-    float fov = 60.0f;
+    float fov = 70.0f;
     float aspect = (float)WINDOW_WIDTH / WINDOW_HEIGHT;
     float nearPlane = 0.1f;
     float farPlane = 100.0f;
