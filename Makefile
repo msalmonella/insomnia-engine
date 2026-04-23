@@ -1,5 +1,3 @@
-# Makefile for fps-engine.c
-
 CC = gcc
 CFLAGS = -Wall -g
 SRC = fps-engine.c
