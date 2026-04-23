@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -g
-SRC = main.c
+SRC = src/*.c
 OUT = insomnia 
 LIBS = -lglfw -lGLEW -lGL -lm
 
