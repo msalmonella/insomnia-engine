@@ -57,10 +57,10 @@ int main() {
 
 		drawFloor();
 		drawCube( 0.0f, 0.0f,  0.0f, 1.0f);
-		drawCube( 3.0f, 0.0f,  0.0f, 1.0f);
-		drawCube(-3.0f, 0.0f,  0.0f, 1.0f);
-		drawCube( 0.0f, 0.0f, -3.0f, 1.0f);
 		drawCube( 0.0f, 2.0f,  0.0f, 1.0f);
+		drawCube(1.0f, 0.0f,  0.0f, 1.0f);
+		drawCube( -1.0f, 0.0f, 0.0f, 1.0f);
+		drawCube( 0.0f, 1.0f,  0.0f, 1.0f);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
