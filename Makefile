@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -g
-SRC = fps-engine.c
-OUT = fps-engine
+SRC = main.c
+OUT = insomnia 
 LIBS = -lglfw -lGLEW -lGL -lm
 
 all:
