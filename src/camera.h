@@ -6,8 +6,8 @@
 // camera state
 typedef struct {
     float x, y, z;
-    float yaw, pitch;
     float speed;
+	float yaw, pitch;
     float mouseSensitivity;
 } Camera;
 
